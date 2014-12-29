@@ -15,6 +15,7 @@ code-test
  http://www.data.jma.go.jp/gmd/risk/obsdl/index.php
 
 ※言語、書き方、フォーマット等は自由とします。
+
 ※回答が出来から最上(tmogami@gmail.com)までご連絡を。
 
 
