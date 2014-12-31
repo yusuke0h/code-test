@@ -1,0 +1,16 @@
+Instanceの同一性を確認
+70317016073720
+70317016073720
+
+70317011981720
+70317011981720
+
+70317015931160
+70317012423840
+
+darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin 
+SingSetting 処理概要 0.00014372599980561063s
+darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin 
+MySingSetting 処理概要 0.00013366899656830356s
+darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin darwin 
+NormalSetting 処理概要 0.9446274910005741s
