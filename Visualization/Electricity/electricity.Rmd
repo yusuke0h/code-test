@@ -1,0 +1,23 @@
+---
+title: "electricity"
+output: html_document
+---
+
+# データ読み込み
+```{r}
+elec <- read.csv("~/Projects/Git/code-test/Visualization/Electricity/csv/merged.csv")
+head(elec)
+```
+
+# 可視化
+```{r}
+library("ggplot2", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
+ggplot(elec, aes(x=amount)) + geom_histogram()
+```
+
+でも見たいのはこれじゃない感じ  
+→ 日別，時間別の傾向をみたい  
+→ つまり新しくcsvを作らないといけない感じ
+
+
+
