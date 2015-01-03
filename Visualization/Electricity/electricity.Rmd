@@ -17,7 +17,29 @@ ggplot(elec, aes(x=amount)) + geom_histogram()
 
 でも見たいのはこれじゃない感じ  
 → 日別，時間別の傾向をみたい  
-→ つまり新しくcsvを作らないといけない感じ
+→ つまり新しくcsvを作らないといけない
 
+# 新ファイル読み込み
+```{r}
+day <- read.csv("~/Projects/Git/code-test/Visualization/Electricity/csv/day.csv")
+
+ggplot(day, aes(x=index, y=amount)) + geom_bar(stat = "identity")
+ggplot(day, aes(x=index, y=amount)) + geom_line()
+```
+
+電力使用量は年々下がっているみたい  
+一時期がたっと下がっているのは東日本大震災だと思う．  
+これ以来，電力使用量が抑えられているし  
+  
+ずっと一次元的に見るのでなく，毎年のグラフを重ねたい  
+そうするとmeltして重ねないといけないのか  
+
+
+```{r}
+hour <- read.csv("~/Projects/Git/code-test/Visualization/Electricity/csv/hour.csv")
+
+ggplot(hour, aes(x=index, y=amount)) + geom_bar(stat = "identity")
+ggplot(hour, aes(x=index, y=amount)) + geom_line()
+```
 
 
