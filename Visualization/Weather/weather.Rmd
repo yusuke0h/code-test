@@ -1,0 +1,75 @@
+---
+title: "weather.rmd"
+output: html_document
+---
+
+# データ読み込み
+```{r}
+weather <- read.csv("~/Projects/Git/code-test/Visualization/Weather/csv/clean_data.csv")
+head(weather)
+```
+
+# 可視化
+
+```{r, echo=FALSE}
+library("ggplot2", lib.loc="/Library/Frameworks/R.framework/Versions/3.0/Resources/library")
+ggplot(weather, aes(x=index, y=temperature, colour=factor(location), fill=factor(location))) + geom_line()
+ggplot(weather, aes(x=index, y=temperature, colour=factor(location), fill=factor(location))) + geom_point() + geom_smooth()
+```
+
+よくわからん
+なんとなく熊本のほうが寒そうに見えるが…
+5年間の平均気温をとったほうが良さそう
+
+# 1年の平均
+```{r}
+year_ave <- read.csv("~/Projects/Git/code-test/Visualization/Weather/csv/year_ave.csv")
+head(year_ave)
+ggplot(year_ave, aes(x=index, y=temperature, colour=factor(location), fill=factor(location))) + geom_point() + geom_smooth()
+```
+なんとも言いがたい．
+冬場は熊本のほうが寒いが，春から夏にかけては熊本が暑いみたい
+検定してみるか．
+
+別のプロット
+```{r}
+ggplot(year_ave, aes(x=factor(location), y=temperature, colour=factor(location))) + geom_point()
+ggplot(year_ave, aes(x=factor(location), y=temperature, colour=factor(location))) + geom_boxplot()
+```
+
+ああ，なんか平均を見ると熊本のほうが暑そう．
+
+# 検定
+```{r}
+t.test(temperature ~ location, data=year_ave, paired=T)
+```
+
+差がある．
+熊本のほうが暑いということに．
+全データやるとまあそうなるだろう．
+なので冬場(12-3月)だけを取り出してみよう．
+
+# 冬場の気温の違い
+```{r}
+winter <- read.csv("~/Projects/Git/code-test/Visualization/Weather/csv/winter.csv")
+ggplot(winter, aes(x=factor(location), y=temperature, colour=factor(location))) + geom_point()
+ggplot(winter, aes(x=factor(location), y=temperature, colour=factor(location))) + geom_boxplot()
+t.test(temperature ~ location, data=winter, paired=T)
+```
+差があるとは言えない！！
+ただ，熊本のほうが冬場の値の分散が大きいのかな？
+つまり寒い日暖かい日があるので，寒い日が余計寒く感じるのではないかな．
+
+```{r}
+win_kuma <- subset(winter, location == "Kumamoto")
+summary(win_kuma)
+var(win_kuma$temperature)
+
+win_tokyo <- subset(winter, location == "Tokyo")
+summary(win_tokyo)
+var(win_tokyo$temperature)
+```
+
+データからも分散が大きい事がわかる．
+
+
